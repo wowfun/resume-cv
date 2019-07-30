@@ -1,0 +1,22 @@
+% define some info
+\ifthenelse{\boolean{en}}{
+  \newcommand{\name}{Haizhou Cao}
+  \newcommand{\address}{Zhengzhou, China.}
+  \newcommand{\myquote}{Stay hungry. Stay foolish.}
+  \ifthenelse{\boolean{cv}}{
+    \newcommand{\type}{Curriculum Vitae}
+    }{
+    \newcommand{\type}{Resume}
+  }
+  }{
+  \newcommand{\name}{操海洲}
+  \newcommand{\address}{河南省郑州市}
+  \newcommand{\myquote}{博学而笃志，切问而近思}
+  \newcommand{\type}{个人简历}
+}
+
+\newcommand{\email}{haggi.cho@outlook.com}
+\newcommand{\homepage}{sinputer.top}
+\newcommand{\homepagelink}{https://sinputer.top}
+\newcommand{\mobile}{+86 166 3820 1869}
+\newcommand{\github}{wowfun}
