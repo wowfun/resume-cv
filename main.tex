@@ -1,0 +1,53 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{ifthen}
+\newboolean{cv}
+\newboolean{en}
+\newboolean{showdate}
+\newboolean{shownote}
+\newboolean{showpagenum}
+\newboolean{toprint}
+
+\input{./controlmatters}
+
+\ifthenelse{\boolean{toprint}}{
+  \setboolean{showdate}{false}
+  \setboolean{shownote}{false}
+}
+
+\ifthenelse{\boolean{cv}}{}{
+  \setboolean{showpagenum}{false}
+}
+
+% cn
+\ifthenelse{\boolean{en}}{}{
+  \usepackage{ctex}
+}
+
+\usepackage{themes/default}
+
+\begin{document}
+
+\input{./frontmatters}
+\input{sections/header}
+
+\ifthenelse{\boolean{cv}}{
+\input{sections/introduction}
+}{}
+
+\input{sections/education}
+\input{sections/research}
+% \input{sections/work}
+% \input{sections/skills}
+% \input{sections/projects}
+
+\ifthenelse{\boolean{cv}}{
+% \input{sections/publications}
+% \input{sections/talks}
+\input{sections/honors}
+\input{sections/activities}
+\input{sections/additional}
+% \input{sections/references}
+}{}
+
+\end{document}
