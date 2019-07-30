@@ -1,0 +1,11 @@
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{\Large \name}  & \textbf{\Large \type}\\
+	\address & \emph{\myquote}\\
+	\faEnvelope ~ \href{mailto:\email}{\email}  & \href{\homepagelink}{\homepage ~ \faGlobe} \\
+	\faPhone ~ \mobile & \href{https://github.com/\github}{@\github ~ \faGithub}\\
+	\ifthenelse{\boolean{en}}{
+		\ifthenelse{\boolean{showdate}}{\sffamily Last update: \today}{} & \ifthenelse{\boolean{shownote}}{\sffamily Note: colored texts are clickable.}{} 
+		}{
+			\ifthenelse{\boolean{showdate}}{更新日期：\today}{} & \ifthenelse{\boolean{shownote}}{说明：蓝色字体可点击}{} 
+	}
+\end{tabular*}
