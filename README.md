@@ -2,6 +2,10 @@
 
 Personal resume and cv.
 
+## Requirements
+
+* TeX Live
+
 ## Getting Started
 
 * Edit `controlmatters.tex` to define what type of `main.tex` to build.
