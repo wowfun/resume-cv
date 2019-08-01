@@ -3,6 +3,6 @@ xelatex -synctex=1 -interaction=nonstopmode main.tex
 xelatex -synctex=1 -interaction=nonstopmode main.tex
 :: delete
 del *.log *.aux *.out *.fls *.fdb_latexmk *.gz *.xdv 
-del CaoHaizhou_Resume.pdf
+del HaizhouCao_Resume.pdf
 :: rename
-ren main.pdf CaoHaizhou_Resume.pdf
+ren main.pdf HaizhouCao_Resume.pdf
